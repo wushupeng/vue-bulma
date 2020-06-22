@@ -2,7 +2,7 @@
   <div id="app">
     <h1>Nested Named Views</h1>
     <router-view class="view one" name="topBar"></router-view>
-    <div class="columns">
+    <div class="columns Site-content">
       <div class="column is-four-fifths">
         <router-view class="view two" name="sideBar"></router-view>
       </div>
@@ -39,12 +39,5 @@ export default {
 </script>
 
 <style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
+@import "~bulma/css/bulma.css";
 </style>
