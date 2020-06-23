@@ -1,11 +1,10 @@
 <template>
   <div id="app" class="Site">
-    <div class="columns Site-content">
-      <div class="column is-2">
+    <div class="columns is-gapless Site-content">
+      <div id="sideBar" class="column is-2">
         <router-view class="view two" name="sideBar"></router-view>
       </div>
-      <div class="column">
-        <h1>Nested Named Views</h1>
+      <div class="column" id="right">
         <router-view class="view one" name="topBar"></router-view>
         <router-view class="view four" name="body"></router-view>
       </div>
