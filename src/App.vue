@@ -1,12 +1,12 @@
 <template>
-  <div id="app">
-    <h1>Nested Named Views</h1>
-    <router-view class="view one" name="topBar"></router-view>
+  <div id="app" class="Site">
     <div class="columns Site-content">
-      <div class="column is-four-fifths">
+      <div class="column is-2">
         <router-view class="view two" name="sideBar"></router-view>
       </div>
       <div class="column">
+        <h1>Nested Named Views</h1>
+        <router-view class="view one" name="topBar"></router-view>
         <router-view class="view four" name="body"></router-view>
       </div>
     </div>
@@ -40,4 +40,14 @@ export default {
 
 <style>
 @import "~bulma/css/bulma.css";
+@import "~font-awesome/css/font-awesome.min.css";
+.Site {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+}
+
+.Site-content {
+  flex: 1;
+}
 </style>
