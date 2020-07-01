@@ -13,9 +13,15 @@
         <li class="father-li">
           <a class="menu-item">菜单一</a>
           <ul class="hidden">
-              <li><a class="menu-item">子菜单1</a></li>
-              <li><a class="menu-item">子菜单2</a></li>
-              <li><a class="menu-item">子菜单3</a></li>
+              <li>
+                <a class="menu-item"><router-link to="/menu1">子菜单1</router-link></a>                
+              </li>
+              <li>
+                <a class="menu-item"><router-link to="/menu2">子菜单2</router-link></a>                
+              </li>
+              <li>
+                <a class="menu-item"><router-link to="/menu3">子菜单3</router-link></a>                
+              </li>
           </ul>
         </li>
         <li class="father-li">

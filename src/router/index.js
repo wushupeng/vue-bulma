@@ -8,10 +8,10 @@ const router = new VueRouter({
             path: '/home',
             name: 'home',
             components: {
-                topBar:()=>import('@/components/TopBar'),
-                sideBar:()=>import('@/components/SideNav'),
-                bottomBar:()=>import('@/components/BottomBar'),
-                body:()=>import('@/components/ContextCenter'),
+                topBar: () => import('@/components/TopBar'),
+                sideBar: () => import('@/components/SideNav'),
+                bottomBar: () => import('@/components/BottomBar'),
+                body: () => import('@/components/ContextCenter'),
 
             },
         },
@@ -30,8 +30,16 @@ const router = new VueRouter({
         }, {
             path: '/body',
             name: 'body',
-            component: () => import('@/components/ContextCenter'),
+            component: () => import('@/components/ContextCenter')
+            
+        },{
+            path: '/menu1',
+            name: 'menu1',
+            components: {
+                body:() => import('@/components/menu1')
+            }
         }
+
     ],
     mode: "history"
 });

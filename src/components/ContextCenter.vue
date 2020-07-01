@@ -7,6 +7,7 @@
       <p class="subtitle">
         My first website with <strong>Bulma</strong>!
       </p>
+      <router-view></router-view>
     </div>
   </section>
 </template>

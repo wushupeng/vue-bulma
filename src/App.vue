@@ -1,11 +1,11 @@
 <template>
   <div id="app" class="Site">
+    <router-view class="view one" name="topBar"></router-view>
     <div class="columns is-gapless Site-content">
       <div id="sideBar" class="column is-2">
-        <router-view class="view two" name="sideBar"></router-view>
+        <SideNav class="view two" name="sideBar"></SideNav>
       </div>
       <div class="column" id="right">
-        <router-view class="view one" name="topBar"></router-view>
         <router-view class="view four" name="body"></router-view>
       </div>
     </div>
@@ -15,6 +15,7 @@
 </template>
 
 <script>
+import SideNav from "./components/SideNav"
 export default {
   name: "App",
   mounted: function() {
@@ -33,6 +34,9 @@ export default {
         this.$i18n.locale = "ja";
       }
     }
+  },
+  components:{
+    "SideNav":SideNav
   }
 };
 </script>
