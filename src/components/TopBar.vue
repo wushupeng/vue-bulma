@@ -1,8 +1,30 @@
 <template>
   <nav class="navbar is-link" role="navigation">
+    <div class="navbar-brand">
+      <a href="https://bulma.io" class="navbar-item  is-light">
+        <img src="https://bulma.io/images/bulma-logo.png" width="112" height="28">
+      </a>
+    </div>
     <!-- <div id="label" @click="menuToggle">
       <font-awesome-icon :icon="['fas', 'bars']" />
     </div> -->
+    <div class="navbar-menu">
+      <div class="navbar-start">
+
+      </div>
+      <div class="navbar-end">
+        <div class="navbar-item">
+          <div class="buttons">
+            <a class="button is-primary">
+              <strong>Sign up</strong>
+            </a>
+            <a class="button is-light">
+              Log in
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
   </nav>
 </template>
 <style>

@@ -1,21 +1,23 @@
 <template>
   <div id="app" class="Site">
-    <router-view class="view one" name="topBar"></router-view>
+    <TopBar name="topBar"></TopBar>
     <div class="columns is-gapless Site-content">
       <div id="sideBar" class="column is-2">
         <SideNav class="view two" name="sideBar"></SideNav>
       </div>
       <div class="column" id="right">
-        <router-view class="view four" name="body"></router-view>
+        <router-view></router-view>
       </div>
     </div>
 
-    <router-view class="view three" name="bottomBar"></router-view>
+    <BottomBar name="bottomBar"></BottomBar>
   </div>
 </template>
 
 <script>
 import SideNav from "./components/SideNav"
+import TopBar from "./components/TopBar"
+import BottomBar from "@/components/BottomBar"
 export default {
   name: "App",
   mounted: function() {
@@ -36,7 +38,9 @@ export default {
     }
   },
   components:{
-    "SideNav":SideNav
+    "SideNav":SideNav,
+    "TopBar":TopBar,
+    "BottomBar":BottomBar
   }
 };
 </script>

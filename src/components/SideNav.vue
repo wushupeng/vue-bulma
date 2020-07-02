@@ -1,26 +1,19 @@
 <template>
   <div id="menu">
-    <nav class="navbar is-light">
-      <div class="navbar-brand">
-        <a class="navbar-item" href="https://bulma.io">
-          <img src="https://bulma.io/images/bulma-logo.png" width="112" height="28" />
-        </a>
-      </div>
-    </nav>
     <aside class="menu">
       <p class="menu-label">General</p>
       <ul class="menu-list">
         <li class="father-li">
-          <a class="menu-item">菜单一</a>
+          <a>菜单一</a>
           <ul class="hidden">
               <li>
-                <a class="menu-item"><router-link to="/menu1">子菜单1</router-link></a>                
+                <router-link class="menu-item" to="/menu1">子菜单1</router-link>          
               </li>
               <li>
-                <a class="menu-item"><router-link to="/menu2">子菜单2</router-link></a>                
+                <router-link class="menu-item" to="/menu2">子菜单2</router-link>              
               </li>
               <li>
-                <a class="menu-item"><router-link to="/menu3">子菜单3</router-link></a>                
+                <router-link class="menu-item" to="/menu3">子菜单3</router-link>          
               </li>
           </ul>
         </li>
@@ -76,7 +69,7 @@ export default {
         });
         let menuItems = document.getElementsByClassName("menu-item");
         menuItems.forEach($el=>{
-            $el.addEventListener('click',()=>{
+            $el.addEventListener('click',(ev)=>{
                 
                 //其他菜单删除is-active类
                 let b = document.getElementsByClassName("menu-item is-active");
@@ -87,7 +80,7 @@ export default {
                 }
                 //选中菜单增加is-active类
                 $el.classList.add('is-active');
-                
+                ev.stopPropagation();
             })
         })
     }
